@@ -1,8 +1,8 @@
-# fauxmoESP
+# FauxmoESP
 
-Amazon Alexa support for ESP8266 devices.
+Amazon Alexa support for ESP8266 and ESP32 devices.
 
-This is a library for ESP8266-based devices that emulates a Belkin WeMo device and thus allows you to control them using this protocol, in particular from Alexa-powered devices like the Amazon Echo or the Dot.
+This is a library for ESP8266/ESP32-based devices that emulates a Belkin WeMo device and thus allows you to control them using this protocol, in particular from Alexa-powered devices like the Amazon Echo or the Dot.
 
 This library is a port of Maker Musings' [Fauxmo Python library][6].
 
@@ -10,7 +10,11 @@ This library is a port of Maker Musings' [Fauxmo Python library][6].
 
 ## Dependencies
 
-This library uses [ESPAsyncTCP][3] libraries by [me-no-dev][5].
+ESP8266: 
+ - This library uses [ESPAsyncTCP][3] libraries by [me-no-dev][5].
+
+ESP32:
+ -This library uses [AsyncTCP][4] libraries by [me-no-dev][5]
 
 ### PlatformIO
 
@@ -19,7 +23,7 @@ If you are using PlatformIO (check the section bellow on how to compile it) you 
 ```
 
 lib_deps =
-    ESPAsyncTCP
+    ESPAsyncTCP     or AsyncTCP
 ```
 
 ### Arduino IDE
@@ -30,7 +34,8 @@ You can look for it manually but I have gathered the URL here for convenience:
 
 |Library|Repository|ZIP|
 |-|-|-|
-|**ESPAsyncTCP** by Hristo Gochkov|[GIT](https://github.com/me-no-dev/ESPAsyncTCP)|[ZIP](https://github.com/me-no-dev/ESPAsyncTCP/archive/master.zip)|
+|**ESPAsyncTCP** by Hristo Gochkov ESP8266|[GIT](https://github.com/me-no-dev/ESPAsyncTCP)|[ZIP](https://github.com/me-no-dev/ESPAsyncTCP/archive/master.zip)|
+|**AsyncTCP** by Hristo Gochkov ESP32|[GIT](https://github.com/me-no-dev/AsyncTCP)|[ZIP](https://github.com/me-no-dev/AsyncTCP/archive/master.zip)|
 
 ## Usage
 
@@ -51,6 +56,7 @@ void setup() {
     fauxmo.addDevice("light two");
     fauxmo.addDevice("light three");
     fauxmo.addDevice("light four");
+    fauxmo.enable(true);
 
     fauxmo.onSetState([](unsigned char device_id, const char * device_name, bool state) {
         Serial.printf("[MAIN] Device #%d (%s) state: %s\n", device_id, device_name, state ? "ON" : "OFF");
@@ -86,5 +92,6 @@ The strategies the library uses to improve discoverability are:
 [1]:https://github.com/esp8266/Arduino
 [2]:http://docs.platformio.org/en/stable/platforms/espressif8266.html#using-arduino-framework-with-staging-version
 [3]:https://github.com/me-no-dev/ESPAsyncTCP
+[4]:https://github.com/me-no-dev/AsyncTCP
 [5]:https://github.com/me-no-dev
 [6]:https://github.com/makermusings/fauxmo
