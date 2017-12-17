@@ -2,15 +2,17 @@
 
 Amazon Alexa support for ESP8266 and ESP32 devices.
 
-Original Code by Xose Pérez <xose dot perez at gmail dot com>  https://bitbucket.org/xoseperez/fauxmoesp
- 
-Additional ESP32 Code by Frank Hellmann <frank at vfx dot to>
-
 This is a library for ESP8266/ESP32-based devices that emulates a Belkin WeMo device and thus allows you to control them using this protocol, in particular from Alexa-powered devices like the Amazon Echo or the Dot.
+
+**Current Version is 2.3.0**, this version shows some backwards incompatibilities with version 1.0.0. Check the examples to rewrite your code if you were using a previous version and read the [changelog](CHANGELOG.md).
+
+## Origin
 
 This library is a port of Maker Musings' [Fauxmo Python library][6].
 
-**Current Version is 2.3.0**, this version shows some backwards incompatibilities with version 1.0.0. Check the examples to rewrite your code if you were using a previous version and read the [changelog](CHANGELOG.md).
+ESP8266 Code by Xose Pérez <xose dot perez at gmail dot com>  https://bitbucket.org/xoseperez/fauxmoesp
+ 
+Additional ESP32 Code by Frank Hellmann <frank at vfx dot to>
 
 ## Dependencies
 
