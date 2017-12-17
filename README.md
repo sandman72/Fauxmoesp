@@ -17,12 +17,10 @@ Additional ESP32 Code by Frank Hellmann <frank at vfx dot to>
 ## Dependencies
 
 ESP8266: 
-
  - This library uses [ESPAsyncTCP][3] libraries by [me-no-dev][5].
 
 ESP32:
-
- -This library uses [AsyncTCP][4] libraries by [me-no-dev][5]
+ - This library uses [AsyncTCP][4] libraries by [me-no-dev][5]
 
 ### PlatformIO
 
