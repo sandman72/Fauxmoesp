@@ -1,6 +1,6 @@
 # FauxmoESP
 
-*Deprecated! The code has been included in the main repo at: https://bitbucket.org/xoseperez/fauxmoesp *
+# Deprecated! The code has been included in the main repo at: https://bitbucket.org/xoseperez/fauxmoesp *
 
 Amazon Alexa support for ESP8266 and ESP32 devices.
 
