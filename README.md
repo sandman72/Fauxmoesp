@@ -1,5 +1,7 @@
 # FauxmoESP
 
+*Deprecated! The code has been included in the main repo at: https://bitbucket.org/xoseperez/fauxmoesp *
+
 Amazon Alexa support for ESP8266 and ESP32 devices.
 
 This is a library for ESP8266/ESP32-based devices that emulates a Belkin WeMo device and thus allows you to control them using this protocol, in particular from Alexa-powered devices like the Amazon Echo or the Dot.
